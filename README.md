@@ -8,11 +8,11 @@ Houseware's vision is to empower the next generation of knowledge workers by put
 
 Houseware is changing the way the data warehouse is leveraged, and we want you to help build Houseware! Our team came together to answer the singular question, "how can we flip the value of the data warehouse to the ones who really need it, to the ones who drive decisions". 
 
-In this role, you'll have the opportunity to work as a Frontend engineer with the Houseware team on multiple customer-facing projects. You'd be involved with delivering the optimal user experience for the end user, while taking complete ownership of engineering challenges - this would include communicating with the stakeholders, setting the right expectations, and ensuring top quality for the code & the product being shipped.
+In this role, you'll have the opportunity to work as a Data engineer with the Houseware team on multiple customer-facing projects. You'd be involved with delivering the data platform for the end user, while taking complete ownership of engineering challenges - this would include communicating with the stakeholders, setting the right expectations, and ensuring top quality for the code & the product being shipped.
 
 ### Octernship role description
 
-We're looking for frontend developers to join the Houseware team. 
+We're looking for data engineers to join the Houseware team. 
 
 We are hell-bent on building a forward-looking product, something that constantly pushes us to think by first principles and question assumptions, building a team that is agile in adapting and ever curious. While fast-paced execution is one of the prerequisites in this role, equally important is the ability to pause and take stock of where product/engineering is heading from a long-term perspective. Your initiative is another thing that we would expect to shine through here, as you continuously navigate through ambiguous waters while working with vigor on open-ended questions - all to solve problems for and empathize with the end users.
 
@@ -25,10 +25,8 @@ We are hell-bent on building a forward-looking product, something that constantl
 ### Recommended qualifications
 
 - You have a solid problem-solving framework.
-- You know Javascript and the Browser ecosystem very well; we love polyglot programmers and have services written in Go and Python.
-- We write React; Typescript, so we expect you to be well versed with React. If you have worked with Typescript or any typed language before, it's a plus.
-
-If you love to optimize web vitals, do SSR, have worked with Bundlers, and multi-threading in JS excites you, we can’t wait to talk.
+- You are well-versed with the Modern Data Stack, and have worked with Cloud Data Warehouses before
+- You have prior experience writing backend systems, and are proficient in SQL/dbt.
 
 ### Eligibility
 
@@ -42,15 +40,44 @@ To participate, you must be:
 
 # Assignment
 
-## TASK-TITLE
+## Segment users on DuckMart!
 
 ### Task instructions
 
-&lt;!--- Use this section to describe the project that students are required to complete. We ask that you also include instructions on running and preparing the students' local environment if necessary. --->
+You have been given a task to segment the user audience for a fictional online service called "DuckMart". Your task is to design and implement a data pipeline, create a database schema, load data into the data warehouse, and write a set of queries to segment the user audience based on user attributes, user events, and metrics.
+
+Data Pipeline: The following are the requirements for the data pipeline:
+
+- Data sources: You will have access to three data sources - User Attributes, User Events, and Metrics. You can assume that data is stored in JSON format and has been collected using various data collection tools.
+- Data collection: You are required to create dummy data using tools like Mockaroo
+- Data transformation: You are required to write a Python script to transform the data from the CSV files into a format suitable for loading into the database.
+- Data loading: You are required to load the transformed data into the database using DuckDB.
+
+Database Schema: The following are the requirements for the database schema:
+
+- User Attributes: User ID, Name, Age, Gender, Location, Signup Date, Subscription Plan, Device Type.
+- User Events: User ID, Event Name, Timestamp.
+- Metrics: User ID, Metric Name, Metric Value.
+
+A few examples of events are "PURCHASE_MADE" or "ADDED_TO_CART". A few examples of metrics are "Total Signups for a User", "Total Revenue by User".
+
+Query Requirements: The following are the requirements for the queries:
+
+- Segment users by age groups: Create age groups of users such as 18-24, 25-34, 35-44, and so on. Count the number of users in each age group and show the percentage of users in each group.
+- Calculate the percentage of users who have made a purchase, by subscription plan and gender.
+- Calculate the average time between user signups and their first purchase, by subscription plan and gender.
+
+You are then required to write out the pseudo-code for a backend API endpoint that can scale to any kind of "Segmentation usecase" like the thee examples mentioned above. Building on top of the mentioned data schema(Users, Events, Metrics), the consumer of this API should be able to specify the segmentation criteria in a JSON-like format and the backend API should be able to convert it into the relevant SQL. Please specify what the spec for the JSON-like payload looks like.
 
 ### Task Expectations
 
-&lt;!--- Please add expectations that students need to follow to be considered. Some examples include: completing the project on their own, not using code from external resources without comprehending the logic, etc.  --->
+You will be evaluated based on the following criteria:
+- Correctness and completeness of the implementation.
+- The pseudocode & JSON spec that powers the "Segmentation API"
+- Performance and scalability of the implementation.
+- Quality of the SQL queries and their optimization.
+- Quality of the code and documentation.
+- Ability to explain and justify design decisions.
 
 ### Task submission
 
@@ -62,6 +89,3 @@ Students are expected to use the [GitHub Flow](https://docs.github.com/en/get-st
 
 3. Using GitHub Discussions to ask any relevant questions regarding the project
 
-### Resources
-
-&lt;!--- Use this section to add resources for students to refer to. For example Documentation, Tutorials, Guides, and more.  --->
