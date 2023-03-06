@@ -64,10 +64,9 @@ A few examples of events are "PURCHASE_MADE" or "ADDED_TO_CART". A few examples 
 Query Requirements: The following are the requirements for the queries:
 
 - Segment users by age groups: Create age groups of users such as 18-24, 25-34, 35-44, and so on. Count the number of users in each age group and show the percentage of users in each group.
-- Calculate the percentage of users who have made a purchase, by subscription plan and gender.
-- Calculate the average time between user signups and their first purchase, by subscription plan and gender.
+- Segment users by location and events: Create a segment of users whose location="California" and have logged in to the product at least once(event_name='LOGIN') and list out the User IDs of all such users.
 
-You are then required to write out the pseudo-code for a backend API endpoint that can scale to any kind of "Segmentation usecase" like the thee examples mentioned above. Building on top of the mentioned data schema(Users, Events, Metrics), the consumer of this API should be able to specify the segmentation criteria in a JSON-like format and the backend API should be able to convert it into the relevant SQL. Please specify what the spec for the JSON-like payload looks like.
+You are then required to write out the pseudo-code for a backend API endpoint that can scale to any kind of "Segmentation usecase" like the two examples mentioned above. Building on top of the mentioned data schema(Users, Events, Metrics), the consumer of this API should be able to specify the segmentation criteria in a JSON-like format and the backend API should be able to convert it into the relevant SQL. Please specify what the spec for the JSON-like payload looks like.
 
 ### Task Expectations
 
