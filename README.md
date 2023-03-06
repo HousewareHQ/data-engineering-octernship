@@ -49,7 +49,7 @@ You have been given a task to segment the user audience for a fictional online s
 As part of this activity, you'll have to do the following
 - Dummy data generation: Create dummy data using tools like Mockaroo
 - Data transformation: Write a Python script to transform the data from the CSV files into a format suitable for loading into the database.
-- Data loading: You are required to load the transformed data into Postres
+- Data loading: You are required to load the transformed data into DuckDB
 
 Database Schema: The following are the requirements for the database schema:
 
