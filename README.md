@@ -44,35 +44,32 @@ To participate, you must be:
 
 ### Task instructions
 
-You have been given a task to segment the user audience for a fictional online service called "DuckMart". Your task is to design and implement a data pipeline, create a database schema, load data into the data warehouse, and write a set of queries to segment the user audience based on user attributes, user events, and metrics.
+You have been given a task to segment the user audience for a fictional online service called "DuckMart". You have to design and implement a backend service that allows for segmenting the user audience based on user attributes and user events.
 
-Data Pipeline: The following are the requirements for the data pipeline:
-
-- Data sources: You will have access to three data sources - User Attributes, User Events, and Metrics. You can assume that data is stored in JSON format and has been collected using various data collection tools.
-- Data collection: You are required to create dummy data using tools like Mockaroo
-- Data transformation: You are required to write a Python script to transform the data from the CSV files into a format suitable for loading into the database.
-- Data loading: You are required to load the transformed data into the database using DuckDB.
+As part of this activity, you'll have to do the following
+- Dummy data generation: Create dummy data using tools like Mockaroo
+- Data transformation: Write a Python script to transform the data from the CSV files into a format suitable for loading into the database.
+- Data loading: You are required to load the transformed data into Postres
 
 Database Schema: The following are the requirements for the database schema:
 
 - User Attributes: User ID, Name, Age, Gender, Location, Signup Date, Subscription Plan, Device Type.
 - User Events: User ID, Event Name, Timestamp.
-- Metrics: User ID, Metric Name, Metric Value.
 
-A few examples of events are "PURCHASE_MADE" or "ADDED_TO_CART". A few examples of metrics are "Total Signups for a User", "Total Revenue by User".
+A few examples of events are "PURCHASE_MADE" or "ADDED_TO_CART".
 
 Query Requirements: The following are the requirements for the queries:
 
-- Segment users by age groups: Create age groups of users such as 18-24, 25-34, 35-44, and so on. Count the number of users in each age group and show the percentage of users in each group.
+- Segment users by age groups: Create a segment of users in the age range 25-34 years and list out the user IDs of all such users.
 - Segment users by location and events: Create a segment of users whose location="California" and have logged in to the product at least once(event_name='LOGIN') and list out the User IDs of all such users.
 
-You are then required to write out the pseudo-code for a backend API endpoint that can scale to any kind of "Segmentation usecase" like the two examples mentioned above. Building on top of the mentioned data schema(Users, Events, Metrics), the consumer of this API should be able to specify the segmentation criteria in a JSON-like format and the backend API should be able to convert it into the relevant SQL. Please specify what the spec for the JSON-like payload looks like.
+You are then required to write out a backend API endpoint that can scale to any kind of "Segmentation usecase" like the two examples mentioned above. Building on top of the mentioned data schema(Users, Events), the consumer of this API should be able to specify the segmentation criteria in a JSON-like format and the backend API should be able to convert it into the relevant SQL. Please specify what the spec for the JSON-like payload looks like.
 
 ### Task Expectations
 
 You will be evaluated based on the following criteria:
 - Correctness and completeness of the implementation.
-- The pseudocode & JSON spec that powers the "Segmentation API"
+- The JSON spec that powers the "Segmentation API"
 - Performance and scalability of the implementation.
 - Quality of the SQL queries and their optimization.
 - Quality of the code and documentation.
